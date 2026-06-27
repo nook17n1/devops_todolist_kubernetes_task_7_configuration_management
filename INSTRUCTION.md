@@ -3,13 +3,14 @@ Need run commands:
 cd .infrastructure
 kubectl apply -f configMap.yml
 kubectl apply -f secret.yml
+kubectl apply -f deployment.yml
 
 2. How to validate the changes.
 Need run commands:
 kubectl get pods -n todoapp
 kubectl exec -it <pod_name> -- sh
 printenv
-And if you see environments witch we inpu early you done well.
+And if you see environments: PYTHONUNBUFFERED, SECRET_KEY witch we input early, you done well.
 Something like that:
 C:\Mate Academy\devops_todolist_kubernetes_task_7_configuration_management\.infrastructure> kubectl exec -it todoapp-547b9dcc67-5xcdg -n todoapp -- sh
 >> ,
